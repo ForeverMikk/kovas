@@ -1,6 +1,7 @@
 /* MAIN STYLES*/
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
 @import url('//db.onlinewebfonts.com/c/0d49fc455f4a8951a42daf952412a713?family=Helvetica+Neue');
+
 body{ 
     margin: 0 ;
     padding: 0 ;
@@ -109,12 +110,20 @@ button {
     width: 2rem;
 }
 
+
+#Izana {
+    background: #fff;
+}
+#Adhara {
+    display: none;
+}
+
 /******************** Project Fases ********************/
 .project-fases {
     font-family: 'Montserrat', sans-serif;
     color: #021A61;
     background: #fff;
-    height: 100vh;
+    /* height: 100vh; */
     /* width: 90%; */
     margin-left: 8rem;
 }
@@ -155,6 +164,9 @@ h2 {
     width: 2rem;
 }
 .project-fases .video-carroucel {
+    align-items: center;
+    text-align: center;
+    /* display: flex; */
     /* display: flex; */
     /* justify-content: center; */
 }
@@ -163,7 +175,7 @@ h2 {
     /* background: #fff; */
     margin: 2rem .5rem;
     /* height: 25rem; */
-    width: 30%; 
+    width: 40%; 
 }
 
 /******************** Quotes ********************/
@@ -180,15 +192,15 @@ h2 {
 
 .quote .data-box {
     margin-top: 5rem;
-    width: 60%;
+    width: 50%;
 }
 
 .quote .data-box p {
     font-size: 1.2rem;
 }
 .quote .image-box {
-    width: 40%;
-    background-image: url('./../assets/images/Principal_Desarrollos.jpeg');
+    width: 50%;
+    background-image: url('./../assets/images/principal-logo.png');
     background-position: center;
 }
 .image-box img {
@@ -246,35 +258,11 @@ h2 {
     margin-right: 3rem;
     text-align: right;
 }
-.carousel-box {
-    /* max-width: 90%; */
-    max-width: 100%;
-    /* max-height: 90% !important; */
-    position: relative;
-    /* text-align: center; */
-    /* height: 100%; */
-    /* margin: auto; */
-}
-/* Hide the images by default */
 .mySlides {
-    /* margin-bottom: 12rem; */
     display: none;
     text-align: center;
-    /* max-height: 90vh !important; */
-    /* margin-bottom: ; */
+    height: 35rem;
 }
-.mySlides div {
-    text-align: start ;
-    max-height: 90vh !important;
-}
-/* Number text (1/3 etc) */
-.numbertext {
-    color: #f2f2f2;
-    font-size: 12px;
-    padding: 8px 12px;
-    position: absolute;
-    top: 0;
-  }
 /* The dots/bullets/indicators */
 .dot {
     cursor: pointer;
@@ -284,7 +272,7 @@ h2 {
     background-color: #bbb;
     border-radius: 50%;
     display: inline-block;
-    transition: background-color 0.6s ease;
+    transition: background-color 1s ease-in-out;
 }
 .active, .dot:hover {
     background-color: #717171;
@@ -292,9 +280,9 @@ h2 {
 /* Fading animation */
 .fade {
     -webkit-animation-name: fade;
-    -webkit-animation-duration: 1.5s;
+    -webkit-animation-duration: 2s;
     animation-name: fade;
-    animation-duration: 1.5s;
+    animation-duration: 2s;
 } 
 @-webkit-keyframes fade {
     from {opacity: .4}
@@ -406,23 +394,29 @@ h2 {
 /*################################## ADHARA ##################################*/
 /*############################################################################*/
 
- .adhara {
+ .adhara-section {
     font-family: 'Montserrat', sans-serif;
     height: 100vh;
     margin: 0 4rem;
-    /* width: 100%; */
-    /* box-sizing:border-box */
 }
 
-.adhara-carousel  {
+.adhara-slider  {
+    height: 360px;
+    max-width: 100%;
+    margin: 0 auto;
+    position: relative;
+    /* overflow: hidden; */
+}
+.adhara-slider .card-container{
+    height: 100%;
+    width: 100%;
     display: flex;
-    justify-content: space-around;
+    overflow: hidden;
+    /* justify-content: space-around; */
 }
-
-.adhara .card {
+.adhara-section .card {
     width: 280px;
     height: 360px;
-    padding: 2rem 1rem;
     background: #fff;
     position: relative;
     display: flex;
@@ -430,10 +424,35 @@ h2 {
     box-shadow: 0px 7px 10px rgba(0,0, 0, 0.5);
     transition: 0.5s ease-in-out;
 }
-.adhara .card:hover {
+.adhara-section .card:nth-child(1) {
+    animation: moveSlideshow 15s linear infinite;
+}
+.adhara-section .card:nth-child(2) {
+    animation: moveSlideshow 15s linear infinite;
+}
+.adhara-section .card:nth-child(3) {
+    animation: moveSlideshow 15s linear infinite;
+}
+.adhara-section .card:nth-child(4) {
+    animation: moveSlideshow 15s linear infinite;
+}
+.adhara-section .card:nth-child(5) {
+    animation: moveSlideshow 15s linear infinite;
+}
+.adhara-section .card:nth-child(6) {
+    animation: moveSlideshow 15s linear infinite;
+}
+
+@keyframes moveSlideshow {
+    100% { 
+      transform: translateX(-66.6666%);  
+    }
+  }
+
+.adhara-section .card:hover {
     transform: translateY(20px);
 }
-.adhara .card::before {
+.adhara-section .card::before {
     content: "";
     position: absolute;
     top: 0;
@@ -446,10 +465,10 @@ h2 {
     transition: 0.5s all;
     opacity: 0;
 }
-.adhara .card:hover::before {
+.adhara-section .card:hover::before {
     opacity: 1;
 }
-.adhara .card img {
+.adhara-section .card img {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -457,7 +476,7 @@ h2 {
     top: 0;
     left: 0;
 }
-.adhara .card .card-info {
+.adhara-section .card .card-info {
     padding: 1rem;
     position: relative;
     z-index: 3;
@@ -466,25 +485,22 @@ h2 {
     transform: translateY(30px);
     transition: 0.5s all;
 }
-.adhara .card:hover .card-info {
+.adhara-section .card:hover .card-info {
     opacity: 1 ;
     transform: translateY(0);
 }
-.adhara .card h3 {
+.adhara-section .card h3 {
     font-size: 2.5rem;
     font-weight: 600;
 }
-.adhara .card p{
+.adhara-section .card p{
     font-size: 1rem;
 }
-.adhara .value .videos {
+.adhara-section .value .videos {
     display: flex;
     justify-content: center;
 }
-.adhara .value .videos video {
-        /* box-shadow: 5px 5px 5px gray; */
-        /* background: #fff; */
+.adhara-section .value .videos video {
         margin: 2rem 2rem;
-        /* height: 25rem; */
         width: 40%;
 }
