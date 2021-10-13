@@ -2,11 +2,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
 @import url('//db.onlinewebfonts.com/c/0d49fc455f4a8951a42daf952412a713?family=Helvetica+Neue');
 
+html {
+    scroll-behavior: smooth;
+}
 body{ 
     margin: 0 ;
     padding: 0 ;
-    scroll-behavior: smooth;
 }
+
+
+#Izana {
+    background: #fff;
+}
+#Adhara {
+    display: none;
+}
+
 
 /******************** Header & Banner ********************/
 header{    
@@ -18,45 +29,51 @@ header{
     -webkit-background-size: cover;
     background-size: cover;
 }
-header .title {
+header .header {
     position: absolute;
     margin-left: 6rem; 
     font-family: 'Montserrat', sans-serif;
     color: #fff;
 }
-header .title h1{
-    margin-top: 50vh;
+header .header h1{
+    margin-top: 40vh;
     margin-bottom: 1rem;
     font-size: 4rem;
     font-weight: 800;
 }
-header .title .title-button {
-    display: flex;
-}
-header .title p {
+.link-button p {
     font-size: 1.5rem;
-    margin-right: 1rem;
+    margin-right: 1.5rem;
 }
-header .title button {
-    background: none;
-    border: none;
+.link-button {
+    display: flex;
+    align-items: center;
 }
-header .title button img {
+.link-button img,
+.link-button a{
     height: 2rem;
     width: 2rem;
 }
-button {
-    cursor: pointer;
+.link-button a:hover{
+    transition: all 0.5s ease;
+    transform: translateX(10px);
 }
+h2 {
+    color: #021A61;
+    font-weight: 500;
+    font-size: 2.5rem;
+    border-left: 4px solid #FF8700;
+    padding-left: 1rem;
+}
+
 /******************** Main Section ********************/
-.projects {
+.main {
     font-family: "Helvetica Neue";
     background: linear-gradient(90deg, #FF8700 50%, #fff 50%);
     width: 100%;
     height: 100vh;
     color: #fff;
 }
-/* Icons */
 .services-icons{
     display: flex;
     justify-content: center;
@@ -76,196 +93,146 @@ button {
 .icon-box:nth-child(n+4){
     color: #FF8700;
 }
-/* Projects Navigation */
-.projects-box {
+.menu-box {
     font-family: 'Montserrat', sans-serif;
     margin-left: 8rem;
     display: flex;
     flex-direction: column;
 }
-.projects-box .projects-title{
-    margin-top: 15vh;
-    font-size: 3rem;
+.menu-box .title{
+    /* margin-top: 15vh; */
+    font-size: 2.5rem;
     font-weight: 300;
     border-left: 4px solid #000;
     padding-left: 1rem;
 }
-.projects-box .izana,
-.projects-box .other {
-    display: flex;
-    font-size: 1.2rem;
-}
-.projects-box .izana p,
-.projects-box .other p{
-    margin-right: 1rem;
-}
-.projects-box .izana button,
-.projects-box .other button {
-    background: none;
+.menu-box button {
     border: none;
+    background: none;
+    cursor: pointer;
 }
-.projects-box .izana button img,
-.projects-box .other button img{
-    height: 2rem;
-    width: 2rem;
+.dropdown-content {
+    position: absolute;
+    margin-left: 20rem;
+    opacity: 0;
+    transition: all 0.5s ease;
 }
-
-
-#Izana {
-    background: #fff;
+.dropdown-content a {
+    display: flex;
+    margin: 1rem 0;
+    text-decoration: none;
+    color: #fff;
 }
-#Adhara {
-    display: none;
+.dropdown-content p {
+    margin: 0 0.5rem;
+}
+.menu-box .link-button:hover button{
+    transition: all 0.5s ease;
+    transform: translateX(10px);
+}
+.menu-box .link-button:hover .dropdown-content,
+.menu-box .dropdown-btn:hover .dropdown-content {
+    opacity: 1;
+    height: auto;
+    display: block;
+    padding-left: 1rem ;
 }
 
 /******************** Project Fases ********************/
-.project-fases {
+.fases {
     font-family: 'Montserrat', sans-serif;
-    color: #021A61;
     background: #fff;
-    /* height: 100vh; */
-    /* width: 90%; */
+    /* margin-left: 8rem; */
+    padding-top: 3rem;
+}
+.fases .title, 
+.fases .fases-info {
     margin-left: 8rem;
 }
-h2 {
-    font-weight: 500;
-    font-size: 2.5rem;
-    border-left: 4px solid #FF8700;
-    padding-left: 1rem;
-}
-.project-fases .title {
-    margin-top: 4rem;
-}
-.project-fases .button-projects,
-.project-fases .button-box {
+.fases-info {
     display: flex;
     justify-content: flex-start;
     align-items: center;
 }
-
-.project-fases .button-box {
-    /* width: 100%; */
-    display: inline-block;
-    margin-left: 5rem;
-}
-.project-fases .button-projects p {
+.fases .fases-info p {
     font-size: 1.2rem;
     width: 70%;
+    margin-right: 4rem;
 }
-.project-fases .button-box {
-    text-align: end;
-}
-.project-fases .button-box button{
+/* .fases .button-box button{
     background: none;
     border: none;
 }
-.project-fases .button-box button img{
+.fases .button-box button img{
     height: 2rem;
     width: 2rem;
-}
-.project-fases .video-carroucel {
-    align-items: center;
+} */
+.fases .videos {
     text-align: center;
-    /* display: flex; */
-    /* display: flex; */
-    /* justify-content: center; */
 }
-.project-fases .video-carroucel video {
-    /* box-shadow: 5px 5px 5px gray; */
-    /* background: #fff; */
+.fases .videos video {
     margin: 2rem .5rem;
-    /* height: 25rem; */
-    width: 40%; 
+    width: 40%;
 }
 
 /******************** Quotes ********************/
 .quote {
-    /* margin-top: 5rem; */
     font-family: 'Montserrat', sans-serif;
-    background: #fff;
-    color: #021A61;
     height: 100vh;
-    /* width: 100%; */
+    margin-top: 5rem;
     margin-left: 8rem;
     display: flex;
 }
-
 .quote .data-box {
-    margin-top: 5rem;
     width: 50%;
 }
-
 .quote .data-box p {
     font-size: 1.2rem;
+}
+.quote .data-box .first {
+    margin-top: 25vh ;
 }
 .quote .image-box {
     width: 50%;
     background-image: url('./../assets/images/principal-logo.png');
     background-position: center;
-}
-.image-box img {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    width: 100% 
-}
-.quote .quote-buttons {
-    margin-top: 25vh;
-    display: flex;
-    flex-direction: column;
-}
-.quote-buttons .brochure,
-.quote-buttons .quote-div {
-    display: flex;
-    /* align-content: center; */
-    align-items: center;
-}
-.quote-buttons .brochure p,
-.quote-buttons .quote-div p{
-    margin-right: 1rem;
-    font-weight: 500;
-}
-.quote-buttons .brochure a,
-.quote-buttons .quote-div a {
-    background: none;
-    border: none;
-}
-.quote-buttons .brochure a img,
-.quote-buttons .quote-div a img{
-    height: 2rem;
-    width: 2rem;
+    background-repeat: no-repeat;
 }
 
 
 /******************** Izana Carousel ********************/
 .izana-carousel {
     height: 100vh;
-    width: 100%;
     font-family: 'Montserrat', sans-serif;
-    box-sizing:border-box
 }
 .izana-carousel h2 {
-    margin-top: 5rem;
+    margin: 6rem 0;
     color: #021A61;
     text-align: center;
-    border: none;
 }
 .izana-carousel .galery {
     text-decoration: none;
     font-size: 1.5rem;
     font-weight: 500;
-    display: block;
-    margin-right: 3rem;
-    text-align: right;
+    color: #fff;
+    position: absolute;
+    padding: 1rem;
+    margin-top: -4rem;
+    margin-left: 83%;
+    background-color: rgba(0,0, 0, 0.7);
+    border-radius: 5px;
+    align-items: flex-end;
+    transition: 0.5s ease;
+}
+.izana-carousel .galery:hover {
+    transform: translateY(-10px);
 }
 .mySlides {
     display: none;
     text-align: center;
     height: 35rem;
 }
-/* The dots/bullets/indicators */
 .dot {
-    cursor: pointer;
     height: 15px;
     width: 15px;
     margin: 0 2px;
@@ -274,22 +241,21 @@ h2 {
     display: inline-block;
     transition: background-color 1s ease-in-out;
 }
-.active, .dot:hover {
+.active {
     background-color: #717171;
 }
-/* Fading animation */
 .fade {
     -webkit-animation-name: fade;
-    -webkit-animation-duration: 2s;
+    -webkit-animation-duration: 4s;
     animation-name: fade;
-    animation-duration: 2s;
+    animation-duration: 4s;
 } 
 @-webkit-keyframes fade {
-    from {opacity: .4}
+    from {opacity: .5}
     to {opacity: 1}
 }
 @keyframes fade {
-    from {opacity: .4}
+    from {opacity: .5}
     to {opacity: 1}
 }
 
@@ -503,4 +469,8 @@ h2 {
 .adhara-section .value .videos video {
         margin: 2rem 2rem;
         width: 40%;
+}
+
+.quadra-section {
+    display: none;
 }

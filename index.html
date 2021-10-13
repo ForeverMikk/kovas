@@ -13,17 +13,17 @@
 <body>
     <!----------- HEADER ----------->
     <header> 
-        <div class="title">
-            <h1>Conoce tu <br> próximo hogar...</h1>
-            <div class="title-button">
-                <p>Descubre <br> las ofertas</p>
-                <button><img src="./resources/assets/icons/FlechaDerecha_Beige.png" alt=""></button>
+        <div class="header">
+            <h1>Conoce tu <br> próximo <br> hogar...</h1>
+            <div class="link-button">
+                <p>Descubre <br> Izana</p>
+                <a href="#main"><img src="./resources/assets/icons/FlechaAbajo_Blanco.png" alt=""></a>
             </div>
         </div>
     </header>
 
     <!----------- Main Section ----------->
-    <section class="projects">
+    <section class="main" id="main">
         <div class="services-icons">
             <div class="icon-box">
                 <img src="./resources/assets/icons/Icono_.png" alt="">
@@ -51,39 +51,41 @@
             </div>
         </div>
 
-        <div class="projects-box">
-            <p class="projects-title">Navega por los <br> DESARROLLOS</p>
-            <div class="izana"> 
+        <div class="menu-box">
+            <p class="title">Navega por los <br> DESARROLLOS</p>
+            <div class="link-button"> 
                 <p>IZANA</p>
-                <button>
-                    <img src="./resources/assets/icons/FlechaDerecha_Beige.png" alt="">
-                </button>
+                <a href="#Izana" onclick="switchVisible();"><img src="./resources/assets/icons/FlechaDerecha_Beige.png" alt="">
+                </a>
             </div>
             
-            <div class="other">
+            <div class="link-button">
                 <p> OTROS PROYECTOS </p>
-                <button onclick="switchVisible();">
-                    <img src="./resources/assets/icons/FlechaDerecha_Beige.png" alt="">
-                </button>
+                <button class="dropdown-btn"><img src="./resources/assets/icons/FlechaDerecha_Beige.png" alt=""></button>
+                <div class="dropdown-content">
+                    <a href="#Adhara"><p>Ahdara</p><img src="./resources/assets/icons/FlechaDerecha_Beige.png" alt=""></a>
+                    <a href="#Quadra"><p>Quadra</p><img src="./resources/assets/icons/FlechaDerecha_Beige.png" alt=""></a>
+                </div>
             </div>
         </div>
     </section>
 
 
     <section class="izana-section active" id="Izana">
+
         <!----------- Project Fases ----------->
-        <section class="project-fases">
+        <section class="fases">
             <h2 class="title">Etapa del <br> Proyecto</h2>
-            <div class="button-projects">
+            <div class="fases-info">
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, quod mollitia ut sequi rem dolorum molestias magnam autem voluptates laboriosam nobis necessitatibus eveniet, voluptatem, nemo alias eaque architecto natus consequuntur?</p>
         
-                <div class="button-box">
+                <!-- <div class="button-box">
                     <button class="left"><img src="./resources/assets/icons/FlechaIzquierda_Azul.png" alt=""></button>
                     <button class="right"><img src="./resources/assets/icons/FlechaDerecha_Azul.png" alt=""></button>
-                </div>
+                </div> -->
             </div>
     
-            <div class="video-carroucel">
+            <div class="videos">
                 <video controls>
                     <source src="./resources/assets/izana/Izana_EtapadelProyecto1.mp4" type="video/mp4">
                 </video>
@@ -96,28 +98,26 @@
             </div>
         </section>
 
-       
-    
         <!----------- Quote  ----------->
         <section class="quote">
             <div class="data-box">
                 <h2 class="title">Conoce y cotiza <br> tu futuro</h2>
                 <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestias magni dolorem vero neque necessitatibus repellat nobis placeat, quasi beatae perspiciatis unde, culpa autem et consequatur sunt voluptates eveniet aspernatur! Neque!</p>
-                <div class="quote-buttons">
-                    <div class="brochure"> 
-                        <p>BROCHURE</p>
-                        <a href="./resources/assets/izana/Izana_Folleto.pdf" target="_blank">
-                            <img src="./resources/assets/icons/FlechaDerecha_Azul.png" alt="">
-                        </a>
-                    </div>
-                    
-                    <div class="quote-div">
-                        <p> COTIZA </p>
-                        <a href="#" target="_blank">
-                            <img src="./resources/assets/icons/FlechaDerecha_Azul.png" alt="">
-                        </a>
-                    </div>
+                
+                <div class="link-button first"> 
+                    <p>BROCHURE</p>
+                    <a href="./resources/assets/izana/Izana_Folleto.pdf" target="_blank">
+                        <img src="./resources/assets/icons/FlechaDerecha_Azul.png" alt="">
+                    </a>
                 </div>
+                
+                <div class="link-button">
+                    <p> COTIZA </p>
+                    <a href="#" target="_blank">
+                        <img src="./resources/assets/icons/FlechaDerecha_Azul.png" alt="">
+                    </a>
+                </div>
+
             </div>
     
             <div class="image-box"></div>
@@ -127,7 +127,7 @@
         <section class="izana-carousel">
             <h2 class="carousel-title"> "IZANA a la medida de tus SUEÑOS"</h2>
             <!----------- Izana Amenidades ----------->
-            <div style="text-align:center">
+            <div class="dot-box" style="text-align:center">
                 <span class="dot" onclick="currentSlide(1)"></span>
                 <span class="dot" onclick="currentSlide(2)"></span>
                 <span class="dot" onclick="currentSlide(3)"></span>
@@ -211,7 +211,7 @@
     
     <section class="adhara-section" id="Adhara">
         <!-- Hemos construido grandes cosas -->
-        <section class="intro">
+        <section class="adhara">
             <div class="adhara-info">
                 <div class="title">
                     <h2>Hemos construido <br> grandes cosas</h2>
@@ -294,6 +294,93 @@
                 </video>
             </div>
         </section>
+    </section>
+
+    <section class="quadra-section" id="Quadra">
+
+        <section class="quadra">
+            <div class="quadra-info">
+                <div class="title">
+                    <h2>Hemos construido <br> grandes cosas</h2>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ut voluptas nobis reprehenderit molestias! Atque minus, est alias ullam soluta sint quidem voluptatem sit, eos odit esse eius temporibus id cum!</p>
+                </div>
+                <div class="quadra-logo">
+                    <img src="./resources/assets/quadra/" alt="">
+                </div>
+            </div>
+
+            <div class="quadra-slider">
+               <div class="card-container">
+
+                   <div class="card ">
+                       <img src="./resources/assets/izana/Izana_Amenidades1.jpeg" alt="">
+                       <div class="card-info">
+                           <h3>Caceta de Vigilancia</h3>
+                           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex facilis id atque natus quibusdam</p>
+                       </div>
+                   </div>
+           
+                   <div class="card ">
+                       <img src="./resources/assets/izana/Izana_Amenidades2.jpeg" alt="">
+                       <div class="card-info">
+                           <h3>Caceta de Vigilancia</h3>
+                           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex facilis id atque natus quibusdam</p>
+                       </div>
+                   </div>
+           
+                   <div class="card ">
+                       <img src="./resources/assets/izana/Izana_Amenidades3.jpeg" alt="">
+                       <div class="card-info">
+                           <h3>Caceta de Vigilancia</h3>
+                           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex facilis id atque natus quibusdam</p>
+                       </div>
+                   </div>
+    
+                   <div class="card ">
+                       <img src="./resources/assets/izana/Izana_Amenidades4.jpeg" alt="">
+                       <div class="card-info">
+                           <h3>Caceta de Vigilancia</h3>
+                           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex facilis id atque natus quibusdam</p>
+                       </div>
+                   </div>
+           
+                   <div class="card ">
+                       <img src="./resources/assets/izana/Izana_Amenidades5.jpeg" alt="">
+                       <div class="card-info">
+                           <h3>Caceta de Vigilancia</h3>
+                           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex facilis id atque natus quibusdam</p>
+                       </div>
+                   </div>
+           
+                   <div class="card ">
+                       <img src="./resources/assets/izana/Izana_Amenidades4.jpeg" alt="">
+                       <div class="card-info">
+                           <h3>Caceta de Vigilancia</h3>
+                           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex facilis id atque natus quibusdam</p>
+                       </div>
+                   </div>
+               </div>
+               
+            </div>
+        </section>
+
+        <!-- Lo que da valor -->
+        <section class="value">
+            <div class="title">
+                <h2>Hemos construido <br> grandes cosas</h2>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ut voluptas nobis reprehenderit molestias! Atque minus, est alias ullam soluta sint quidem voluptatem sit, eos odit esse eius temporibus id cum!</p>
+            </div>
+
+            <div class="videos">
+                <video controls>
+                    <source src="./resources/assets/izana/Izana_EtapadelProyecto1.mp4" type="video/mp4">
+                </video>
+                <video controls>
+                    <source src="./resources/assets/izana/Izana_EtapadelProyecto2.mp4" type="video/mp4">
+                </video>
+            </div>
+        </section>
+
     </section>
 
     <script>
