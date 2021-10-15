@@ -7,8 +7,7 @@
     <title>Kovas - Conóce tu Próximo Hogar</title>
     <link rel="stylesheet" href="./resources/css/styles.css">
 
-
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.3.0-beta.4/lightgallery.es5.min.js"></script>
 </head>
 <body>
     <!----------- HEADER ----------->
@@ -21,7 +20,7 @@
             </div>
         </div>
     </header>
-
+    
     <!----------- Main Section ----------->
     <section class="main" id="main">
         <div class="services-icons">
@@ -55,7 +54,7 @@
             <p class="title">Navega por los <br> DESARROLLOS</p>
             <div class="link-button"> 
                 <p>IZANA</p>
-                <a href="#Izana" onclick="switchVisible();"><img src="./resources/assets/icons/FlechaDerecha_Beige.png" alt="">
+                <a href="#Izana" onclick="switchIzana();"><img src="./resources/assets/icons/FlechaDerecha_Beige.png" alt="">
                 </a>
             </div>
             
@@ -63,28 +62,28 @@
                 <p> OTROS PROYECTOS </p>
                 <button class="dropdown-btn"><img src="./resources/assets/icons/FlechaDerecha_Beige.png" alt=""></button>
                 <div class="dropdown-content">
-                    <a href="#Adhara"><p>Ahdara</p><img src="./resources/assets/icons/FlechaDerecha_Beige.png" alt=""></a>
-                    <a href="#Quadra"><p>Quadra</p><img src="./resources/assets/icons/FlechaDerecha_Beige.png" alt=""></a>
+                    <a href="#Adhara" onclick="switchAdhara();"><p>Ahdara</p><img src="./resources/assets/icons/FlechaDerecha_Beige.png" alt=""></a>
+                    <a href="#Quadra" onclick="switchQuadra();"><p>Quadra</p><img src="./resources/assets/icons/FlechaDerecha_Beige.png" alt=""></a>
                 </div>
             </div>
         </div>
     </section>
 
-
+    
     <section class="izana-section active" id="Izana">
 
         <!----------- Project Fases ----------->
         <section class="fases">
             <h2 class="title">Etapa del <br> Proyecto</h2>
             <div class="fases-info">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, quod mollitia ut sequi rem dolorum molestias magnam autem voluptates laboriosam nobis necessitatibus eveniet, voluptatem, nemo alias eaque architecto natus consequuntur?</p>
-        
+                <p>¡Conoce las maravillas que puedes encontrar!</p>
+                
                 <!-- <div class="button-box">
                     <button class="left"><img src="./resources/assets/icons/FlechaIzquierda_Azul.png" alt=""></button>
                     <button class="right"><img src="./resources/assets/icons/FlechaDerecha_Azul.png" alt=""></button>
                 </div> -->
             </div>
-    
+            
             <div class="videos">
                 <video controls>
                     <source src="./resources/assets/izana/Izana_EtapadelProyecto1.mp4" type="video/mp4">
@@ -97,12 +96,12 @@
                 </video>
             </div>
         </section>
-
+        
         <!----------- Quote  ----------->
         <section class="quote">
             <div class="data-box">
                 <h2 class="title">Conoce y cotiza <br> tu futuro</h2>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestias magni dolorem vero neque necessitatibus repellat nobis placeat, quasi beatae perspiciatis unde, culpa autem et consequatur sunt voluptates eveniet aspernatur! Neque!</p>
+                <p>Podemos ofrecerte planes financieros que se ajusten a tus necesidades, ¡a meses sin intereses!</p>
                 
                 <div class="link-button first"> 
                     <p>BROCHURE</p>
@@ -117,12 +116,12 @@
                         <img src="./resources/assets/icons/FlechaDerecha_Azul.png" alt="">
                     </a>
                 </div>
-
+                
             </div>
-    
+            
             <div class="image-box"></div>
         </section>
-    
+        
         <!----------- Izana Carrousel ----------->
         <section class="izana-carousel">
             <h2 class="carousel-title"> "IZANA a la medida de tus SUEÑOS"</h2>
@@ -140,11 +139,11 @@
                 <div class="mySlides fade">
                     <img src="./resources/assets/izana/Izana_Amenidades1.jpeg" style="height: 100%; width: 100%; object-fit: cover;" >      
                 </div>
-    
+                
                 <div class="mySlides fade">
                     <img src="./resources/assets/izana/Izana_Amenidades2.jpeg" style="height: 100%; width: 100%; object-fit: cover;">
                 </div>
-    
+                
                 <div class="mySlides fade">
                     <img src="./resources/assets/izana/Izana_Amenidades3.jpeg" style="height: 100%; width: 100%; object-fit: cover;">
                 </div>
@@ -152,139 +151,202 @@
                 <div class="mySlides fade">
                     <img src="./resources/assets/izana/Izana_Amenidades4.jpeg" style="height: 100%; width: 100%; object-fit: cover;">
                 </div>
-    
+                
                 <div class="mySlides fade">
                     <img src="./resources/assets/izana/Izana_Amenidades5.jpeg" style="height: 100%; width: 100%; object-fit: cover;">
                 </div>
-    
+                
             </div>
             <a class="galery" href="./galery.html" rel="noopener noreferrer">
                 Visita la galería
             </a>
         </section>
-    
-    
+        
+        
         <section class="amenities">
             
             <div class="amen">
                 <div class="amenities-info">
                     <h2 class="title">Amenidades</h2>
-                    <p>Placeat, quasi beatae perspiciatis unde Placeat, quasi beatae perspiciatis unde, culpa autem et consequatur sunt voluptates eveniet aspernatur! Neque!</p>
+                    <p>Conocemos la importancia de contar con todas las comodidades que necesitas. Disfruta de todas las amenidades que ofrece Izana.</p>
                 </div>
                 
                 <div class="amenities-buttons">
-                    <button class="left"><img src="./resources/assets/icons/FlechaIzquierda_Beige.png" alt=""></button>
-                    <button class="right"><img src="./resources/assets/icons/FlechaDerecha_Beige.png" alt=""></button>
+                    <button class="left" id="button-prev"><img src="./resources/assets/icons/FlechaIzquierda_Beige.png" alt=""></button>
+                    <button class="right" id="button-next"><img src="./resources/assets/icons/FlechaDerecha_Beige.png" alt=""></button>
                 </div>
             </div>
-    
-            <div class="amenities-carousel"> 
-    
-                <div class="card ">
-                    <img src="./resources/assets/izana/Izana_Amenidades1.jpeg" alt="">
-                    <div class="card-info">
-                        <h3>Caceta de Vigilancia</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex facilis id atque natus quibusdam</p>
-                    </div>
-                </div>
-        
-                <div class="card active">
-                    <img src="./resources/assets/izana/Izana_Amenidades2.jpeg" alt="">
-                    <div class="card-info">
-                        <h3>Caceta de Vigilancia</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex facilis id atque natus quibusdam</p>
-                    </div>
-                </div>
-        
-                <div class="card ">
-                    <img src="./resources/assets/izana/Izana_Amenidades4.jpeg" alt="">
-                    <div class="card-info">
-                        <h3>Caceta de Vigilancia</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex facilis id atque natus quibusdam</p>
-                    </div>
-                </div>
-    
-            </div>
-        </section>
-    </section>
+            
+            <div class="amen-car">
+                <div class="slick-list" id="slick-list">
+                    <div class="track" id="track">
 
-    
-    <section class="adhara-section" id="Adhara">
-        <!-- Hemos construido grandes cosas -->
-        <section class="adhara">
+                        <div class="slick">
+                            <div class="card ">
+                                <img src="./resources/assets/izana/Izana_Amenidades1.jpeg" alt="">
+                                <div class="card-info">
+                                    <h3>Pet park </h3>
+                                    <p>(Parque para mascotas)</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="slick">
+                            <div class="card">
+                                <img src="./resources/assets/izana/Izana_Amenidades2.jpeg" alt="">
+                                <div class="card-info">
+                                    <h3>Canchas de tenis</h3>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="slick">
+                            <div class="card ">
+                                <img src="./resources/assets/izana/Izana_Amenidades4.jpeg" alt="">
+                                <div class="card-info">
+                                    <h3><small> Estructura para ejercicios de calistenia</small></h3>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="slick">
+                            <div class="card ">
+                                <img src="./resources/assets/izana/Izana_Amenidades1.jpeg" alt="">
+                                <div class="card-info">
+                                    <h3>Gimnasio Urbano</h3>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="slick">
+                            <div class="card">
+                                <img src="./resources/assets/izana/Izana_Amenidades2.jpeg" alt="">
+                                <div class="card-info">
+                                    <h3>Área de yoga</h3>
+                                    <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex facilis id atque natus quibusdam</p> -->
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="slick">
+                            <div class="card">
+                                <img src="./resources/assets/izana/Izana_Amenidades2.jpeg" alt="">
+                                <div class="card-info">
+                                    <h3>Zona de camping</h3>
+                                    <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex facilis id atque natus quibusdam</p> -->
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="slick">
+                            <div class="card">
+                                <img src="./resources/assets/izana/Izana_Amenidades2.jpeg" alt="">
+                                <div class="card-info">
+                                    <h3>Áreas para picnic</h3>
+                                    <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex facilis id atque natus quibusdam</p> -->
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="slick">
+                            <div class="card">
+                                <img src="./resources/assets/izana/Izana_Amenidades2.jpeg" alt="">
+                                <div class="card-info">
+                                    <h3>Club de playa “El cabo”</h3>
+                                    <p>(En Chuburná puerto)</p>
+                                </div>
+                            </div>
+                        </div>
+
+                </div>
+            </div>
+        </div>
+        
+        <!-- 
+            
+                    
+                    
+                </div> -->
+                
+            </section>
+        </section>
+        
+        
+        <section class="adhara-section" id="Adhara">
+            <!-- Hemos construido grandes cosas -->
+            <section class="adhara">
             <div class="adhara-info">
                 <div class="title">
                     <h2>Hemos construido <br> grandes cosas</h2>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ut voluptas nobis reprehenderit molestias! Atque minus, est alias ullam soluta sint quidem voluptatem sit, eos odit esse eius temporibus id cum!</p>
+                    <p>Terrenos urbanizados, pensados para ser habitados de manera inmediata o próxima.</p>
                 </div>
                 <div class="adhara-logo">
                     <img src="./resources/assets/adhara/" alt="">
                 </div>
             </div>
-
+            
             <div class="adhara-slider">
-               <div class="card-container">
-
-
-                   <div class="card ">
+                <div class="card-container">
+                    
+                    <div class="card ">
                        <img src="./resources/assets/izana/Izana_Amenidades1.jpeg" alt="">
                        <div class="card-info">
-                           <h3>Caceta de Vigilancia</h3>
-                           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex facilis id atque natus quibusdam</p>
+                           <h3>Lago central</h3>
+                           <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex facilis id atque natus quibusdam</p> -->
+                        </div>
+                    </div>
+                    
+                    <div class="card ">
+                        <img src="./resources/assets/izana/Izana_Amenidades2.jpeg" alt="">
+                        <div class="card-info">
+                            <h3>Entradas distintivas</h3>
+                            <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex facilis id atque natus quibusdam</p> -->
                        </div>
-                   </div>
+                    </div>
+                    
+                    <div class="card ">
+                        <img src="./resources/assets/izana/Izana_Amenidades3.jpeg" alt="">
+                        <div class="card-info">
+                            <h3>Cancha de usos múltiples</h3>
+                            <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex facilis id atque natus quibusdam</p> -->
+                        </div>
+                    </div>
+                    
+                    <div class="card ">
+                        <img src="./resources/assets/izana/Izana_Amenidades4.jpeg" alt="">
+                        <div class="card-info">
+                            <h3>Alumbrado</h3>
+                            <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex facilis id atque natus quibusdam</p> -->
+                        </div>
+                    </div>
            
-                   <div class="card ">
-                       <img src="./resources/assets/izana/Izana_Amenidades2.jpeg" alt="">
+                    <div class="card ">
+                        <img src="./resources/assets/izana/Izana_Amenidades5.jpeg" alt="">
                        <div class="card-info">
-                           <h3>Caceta de Vigilancia</h3>
-                           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex facilis id atque natus quibusdam</p>
-                       </div>
-                   </div>
+                           <h3>Sendero para bicicletas</h3>
+                           <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex facilis id atque natus quibusdam</p> -->
+                        </div>
+                    </div>
            
-                   <div class="card ">
-                       <img src="./resources/assets/izana/Izana_Amenidades3.jpeg" alt="">
+                    <div class="card ">
+                        <img src="./resources/assets/izana/Izana_Amenidades4.jpeg" alt="">
                        <div class="card-info">
-                           <h3>Caceta de Vigilancia</h3>
-                           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex facilis id atque natus quibusdam</p>
-                       </div>
-                   </div>
-    
-                   <div class="card ">
-                       <img src="./resources/assets/izana/Izana_Amenidades4.jpeg" alt="">
-                       <div class="card-info">
-                           <h3>Caceta de Vigilancia</h3>
-                           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex facilis id atque natus quibusdam</p>
-                       </div>
-                   </div>
-           
-                   <div class="card ">
-                       <img src="./resources/assets/izana/Izana_Amenidades5.jpeg" alt="">
-                       <div class="card-info">
-                           <h3>Caceta de Vigilancia</h3>
-                           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex facilis id atque natus quibusdam</p>
-                       </div>
-                   </div>
-           
-                   <div class="card ">
-                       <img src="./resources/assets/izana/Izana_Amenidades4.jpeg" alt="">
-                       <div class="card-info">
-                           <h3>Caceta de Vigilancia</h3>
-                           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex facilis id atque natus quibusdam</p>
-                       </div>
-                   </div>
-               </div>
-               
+                           <h3>Lago central</h3>
+                           <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex facilis id atque natus quibusdam</p> -->
+                        </div>
+                    </div>
+                </div>
+                
             </div>
         </section>
 
         <!-- Lo que da valor -->
         <section class="value">
             <div class="title">
-                <h2>Hemos construido <br> grandes cosas</h2>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ut voluptas nobis reprehenderit molestias! Atque minus, est alias ullam soluta sint quidem voluptatem sit, eos odit esse eius temporibus id cum!</p>
+                <h2>Lo que da valor</h2>
+                <p>A 8 minutos de una de las 5 playas más hermosas de Yucatán: Chuburná Puerto.</p>
             </div>
-
+            
             <div class="videos">
                 <video controls>
                     <source src="./resources/assets/izana/Izana_EtapadelProyecto1.mp4" type="video/mp4">
@@ -295,82 +357,86 @@
             </div>
         </section>
     </section>
-
+    
+    
+    
+    
+    
     <section class="quadra-section" id="Quadra">
 
         <section class="quadra">
             <div class="quadra-info">
                 <div class="title">
                     <h2>Hemos construido <br> grandes cosas</h2>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ut voluptas nobis reprehenderit molestias! Atque minus, est alias ullam soluta sint quidem voluptatem sit, eos odit esse eius temporibus id cum!</p>
+                    <p>Un concepto de comunidad planeado especialmente para tu familia en el sureste de México. <br> El desarrollo cuenta con más de 117 hectáreas, lo cual lo vuelve perfecto para su inversión.</p>
                 </div>
                 <div class="quadra-logo">
                     <img src="./resources/assets/quadra/" alt="">
                 </div>
             </div>
-
+            
             <div class="quadra-slider">
-               <div class="card-container">
-
-                   <div class="card ">
-                       <img src="./resources/assets/izana/Izana_Amenidades1.jpeg" alt="">
-                       <div class="card-info">
-                           <h3>Caceta de Vigilancia</h3>
-                           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex facilis id atque natus quibusdam</p>
-                       </div>
-                   </div>
+                <div class="card-container">
+                    
+                    <div class="card ">
+                        <img src="./resources/assets/izana/Izana_Amenidades1.jpeg" alt="">
+                        <div class="card-info">
+                            <h3>A 8 minutos de la Costa Yucateca </h3>
+                           <p>(Chuburná Puerto)</p>
+                        </div>
+                    </div>
            
-                   <div class="card ">
+                    <div class="card ">
                        <img src="./resources/assets/izana/Izana_Amenidades2.jpeg" alt="">
                        <div class="card-info">
-                           <h3>Caceta de Vigilancia</h3>
-                           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex facilis id atque natus quibusdam</p>
-                       </div>
-                   </div>
+                           <h3>Lago Central de 1.6 km</h3>
+                           <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex facilis id atque natus quibusdam</p> -->
+                        </div>
+                    </div>
+                    
+                    <div class="card ">
+                        <img src="./resources/assets/izana/Izana_Amenidades3.jpeg" alt="">
+                        <div class="card-info">
+                           <h3>Canchas de usos múltiples</h3>
+                           <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex facilis id atque natus quibusdam</p> -->
+                        </div>
+                    </div>
+                    
+                    <div class="card ">
+                        <img src="./resources/assets/izana/Izana_Amenidades4.jpeg" alt="">
+                        <div class="card-info">
+                            <h3>Área de juegos infantiles</h3>
+                            <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex facilis id atque natus quibusdam</p> -->
+                        </div>
+                    </div>
            
-                   <div class="card ">
-                       <img src="./resources/assets/izana/Izana_Amenidades3.jpeg" alt="">
-                       <div class="card-info">
-                           <h3>Caceta de Vigilancia</h3>
-                           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex facilis id atque natus quibusdam</p>
-                       </div>
-                   </div>
-    
-                   <div class="card ">
-                       <img src="./resources/assets/izana/Izana_Amenidades4.jpeg" alt="">
-                       <div class="card-info">
-                           <h3>Caceta de Vigilancia</h3>
-                           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex facilis id atque natus quibusdam</p>
-                       </div>
-                   </div>
-           
-                   <div class="card ">
-                       <img src="./resources/assets/izana/Izana_Amenidades5.jpeg" alt="">
-                       <div class="card-info">
-                           <h3>Caceta de Vigilancia</h3>
-                           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex facilis id atque natus quibusdam</p>
-                       </div>
-                   </div>
-           
-                   <div class="card ">
-                       <img src="./resources/assets/izana/Izana_Amenidades4.jpeg" alt="">
-                       <div class="card-info">
-                           <h3>Caceta de Vigilancia</h3>
-                           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex facilis id atque natus quibusdam</p>
-                       </div>
-                   </div>
-               </div>
+                    <div class="card ">
+                        <img src="./resources/assets/izana/Izana_Amenidades5.jpeg" alt="">
+                        <div class="card-info">
+                            <h3>60 mil m2 de áreas verdes</h3>
+                            <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex facilis id atque natus quibusdam</p> -->
+                        </div>
+                    </div>
+                    
+                    <div class="card ">
+                        <img src="./resources/assets/izana/Izana_Amenidades4.jpeg" alt="">
+                        <div class="card-info">
+                            <h3>A 8 minutos de la Costa Yucateca</h3>
+                            <p>(Chuburná Puerto)</p>
+                        </div>
+                    </div>
+                </div>
                
             </div>
         </section>
-
+        
         <!-- Lo que da valor -->
         <section class="value">
             <div class="title">
-                <h2>Hemos construido <br> grandes cosas</h2>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ut voluptas nobis reprehenderit molestias! Atque minus, est alias ullam soluta sint quidem voluptatem sit, eos odit esse eius temporibus id cum!</p>
+                <h2>Lo que da valor </h2>
+                <p>Este desarrollo tiene como prioridad el equilibrio ecológico. Es por esto que nos enfocamos tanto en la conservación de la vegetación y bellezas naturales de los terrenos</p>
             </div>
-
+            
             <div class="videos">
                 <video controls>
                     <source src="./resources/assets/izana/Izana_EtapadelProyecto1.mp4" type="video/mp4">
@@ -380,27 +446,45 @@
                 </video>
             </div>
         </section>
-
+        
     </section>
-
+    
     <script>
         let div1 = document.getElementById('Izana');
         let div2 = document.getElementById('Adhara');
-
-        function switchVisible(){
-            if(getComputedStyle(div1).display === 'block') {
-                div1.style.display = 'none';
-                div2.style.display = 'block';
-                
-                console.log("Uno",div1.style.display);
-            }else {
+        let div3 = document.getElementById('Quadra');
+        
+        function switchIzana() {
+            if(getComputedStyle(div1).display === 'none') {
                 div1.style.display = 'block';
                 div2.style.display = 'none';
+                div3.style.display = 'none';
+                
+                console.log("Uno",div1.style.display);
             }
         }
-
-        // document.getElementById('boton').addEventListener('click', switchVisible)
-    </script>
+        
+        function switchAdhara() {
+            if(getComputedStyle(div2).display === 'none'){
+                div1.style.display = 'none';
+                div2.style.display = 'block';
+                div3.style.display = 'none';
+                
+                console.log("Dos",div1.style.display);
+            }
+        }
+        
+        function switchQuadra() {
+            if(getComputedStyle(div3).display === 'none'){
+                div1.style.display = 'none';
+                div2.style.display = 'none';
+                div3.style.display = 'block';
+                
+                console.log("Tres",div1.style.display);
+            }
+        }
+        </script>
+    <script src="./resources/scripts/carousel.js"></script>
     
     <script src="./resources/scripts/script.js"></script>
 </body>
