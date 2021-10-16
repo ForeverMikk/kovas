@@ -1,11 +1,28 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
 @import url('//db.onlinewebfonts.com/c/0d49fc455f4a8951a42daf952412a713?family=Helvetica+Neue');
 
+
+@font-face {
+    font-family: Titulos;
+    src: url(./../assets/fonts/Titulos.TTF);
+}
+@font-face {
+    font-family: Subtitulos;
+    src: url(./../assets/fonts/Subtitulos.otf);
+}
+@font-face {
+    font-family: Parrafos;
+    src: url(./../assets/fonts/Parrafos.otf);
+}
+
 html, body {
     margin: 0;
     padding: 0;
     scroll-behavior: smooth;
     transition: 0.5s;
+    font-family: 'Parrafos', sans-serif;
+    color: #021A61;
+    background-color: #FCF9F5;
 }
 
 /********* Header **********/
@@ -31,6 +48,7 @@ header .title {
     text-align: center;
 }
 header .title h1{
+    font-family: 'Titulos', 'Montserrat', sans-serif;
     margin-top: 30vh;
     color: #fff;
     margin-bottom: 3rem;
@@ -66,6 +84,8 @@ header .title a img {
     width: 100%;
 }
 h2 {
+    margin: 4rem 0;
+    font-family: 'Subtitulos', 'Monserrat', sans-serif;
     margin-left: 8rem;
     font-weight: 500;
     font-size: 2.5rem;
@@ -81,6 +101,9 @@ h2 {
 }
 .galery-layout a {
     padding: 1rem;
+}
+.return p {
+    font-size: 2rem;
 }
 img {
     width: 100%;
@@ -236,4 +259,19 @@ img {
     grid-column-end: 11;
     grid-row-start: 37;
     grid-row-end: 41;
+}
+
+
+
+@media screen and (max-width: 700px) { 
+
+    header .title h1 {
+        font-size: 3.5rem;
+    }
+    .galery-layout {
+        margin: 0 3rem;
+        display: flex;
+        flex-direction: column;
+    }
+
 }
