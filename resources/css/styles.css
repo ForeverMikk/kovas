@@ -465,8 +465,9 @@ h2 {
  .adhara-section,
  .quadra-section {
     font-family: 'Montserrat', sans-serif;
-    height: 100vh;
+    height: auto;
     margin: 5rem 4rem;
+    position: relative;
 }
 .adhara-slider,
 .quadra-slider {
@@ -485,6 +486,8 @@ h2 {
 }
 .adhara-section .card,
 .quadra-section .card {
+    min-width: 280px !important;
+    border: none !important;
     width: 280px;
     height: 360px;
     background: #FCF9F5;
@@ -606,6 +609,141 @@ h2 {
     display: flex;
     justify-content: center;
 }
+#footer{
+    text-align:center;
+    color:#fff;
+    padding-top: 5%;
+    font-size:1.3em;
+    background-image: url("./../assets/images/Footer.png");
+    background-color: #fcf9f5;
+    background-size:cover;
+    background-position: center;
+    width: 100%;
+    min-height: 1000px;
+}
+
+#logo2{
+    width:150px;
+    min-height: 150px;
+    z-index: 3;
+    background:url('./../assets/images/blancokovas.png') no-repeat;
+    background-size:contain;
+    text-align: center;
+    background-position:center;
+  }
+  #footer .formulario{
+    text-align: left;
+    color: #001763;
+    padding-top: 5%;
+    padding-left: 5%;
+  }
+  #footer .right{
+    text-align: left;
+    color: #fcf9f5;
+    right: 0 !important;
+    margin-left: 65% ;
+    margin-top: 10%;
+    border-left: 2px solid #001763;
+  }
+  #footer .right h3 {
+    color: #021A61;
+  }
+  #footer .correo{
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #001763;
+    width: 60%;
+    padding-top: 3%;
+
+    margin-top: 1rem !important;
+    padding: 3px !important;
+    font-size: 25px !important;
+    transition: all 0.5s ease-in-out !important;
+  }
+  #footer .btn {
+    color: #FFAB00;
+    transition: 0.5s ease-in-out;
+  }
+  #footer .btn:hover {
+    transform: rotateX(10px);
+  }
+  #footer .btn h5 {
+    font-size: 25px ;
+  }
+  
+  #footer .amarillo{
+    color: #ffab00;
+  }
+  #footer .blanco{
+    color: #fff;
+  }
+  
+  #footer .correo::placeholder {
+  color: #001763;
+  font-size: 25px;
+  }
+  #footer .direccion{
+    width: max-content;
+    height: max-content;
+    position: absolute;
+    left: 19vw;
+    padding-top: 5vw;
+    font-size: 1.4vw;
+  }
+  
+  #footer .bottom{
+    position: absolute;
+    left: 17vw;
+    color: white;
+    margin-top: 17vw;
+  }
+  
+  #footer .bottom .socials{
+    font-size: 1.2vw;
+  }
+  
+  #footer .bottom .socials ul li{
+    display: inline-block;
+    list-style: none;
+    height: 3vw;
+    margin-right: 4vw;
+  }
+  
+  
+  #footer .menuright li {
+    list-style:none; 
+  }
+  
+  #footer .menuright li a, footer .menuright li a:hover{
+    color: #fcf9f5;
+    text-decoration: none;
+    text-align: right;
+    padding-right: 15%;
+  }
+  
+  #footer .bottom .copy{
+    padding-left: 2.4vw;
+    font-size: 1.4vw;
+  }
+  
+  #footer .right{
+    position: absolute;
+    right: -3vw;
+  }
+  #footer .footerx{
+    display: flex;
+  }
+  #footer .texoo{
+    padding: 3%;
+    color: rgba(0, 0, 0, 0.5);
+  }
+  .menuflecha{
+    width: auto; 
+      height: auto;
+      max-width: 30px;
+      max-height: 30px;
+    margin-right: 10px;
+  }
 
 /*==================================== RESPONSIVE ======================================*/
 
@@ -726,7 +864,11 @@ h2 {
     }
 }
 
-
+@media screen and (max-width: 980px){
+    #footer .correo{
+        width: 95%;
+    }
+}
 @media screen and (max-width: 900px){
     .main .img-box .image-logo {
         height: 8rem;
@@ -802,7 +944,6 @@ h2 {
         margin-bottom: 1rem;
         font-size: 3rem;
     }
-
     header .link-button p {
         font-size: 1.5rem;
     }
@@ -861,7 +1002,6 @@ h2 {
     .amenities .amenities-info p {
         font-size: 1.2rem;
     }
-    
 }
 @media screen and (max-width: 520px){
     
