@@ -38,6 +38,144 @@ body{
 }
 
 
+/******************** Side Bar ********************/
+
+#menuToggle{
+    font-family: 'Parrafos', sans-serif;
+    /* font-size: 0.5rem !important; */
+    display: block;
+    position: fixed;
+    z-index: 1;
+    -webkit-user-select: none;
+    user-select: none;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0);
+    /* padding: 30px;
+    padding-top: -40px;
+    padding-left: 80px; */
+  }
+  #menuToggle   .imglogo{
+        width: auto; 
+        height: auto;
+        max-width: 180px;
+        max-height: 100px;
+        justify-content: center;
+        align-items: center;
+      }
+  
+  #menuToggle a{
+    text-decoration: none;
+    color: #fff;
+    transition: color 0.3s ease;
+  }
+  
+  #menuToggle a:hover{
+    color: #fff;
+  }
+  
+  
+  #menuToggle input{
+    display: block;
+    width: 40px;
+    height: 32px;
+    position: absolute;
+    top: 20px;
+    left: 75px;
+    /* right: 100px; */
+    cursor: pointer;
+    opacity: 0; 
+    z-index: 2; 
+    /* -webkit-touch-callout: none; */
+  }
+  
+  #menuToggle span{
+    display: block;
+    width: 33px;
+    height: 4px;
+    margin-bottom: 5px;
+    position: relative;
+    top: 20px;
+    left: 75px;
+    
+    background: rgb(255, 255, 255);
+    border-radius: 3px;
+    
+    z-index: 1;
+    
+    transform-origin: 4px 0px;
+    
+    transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+                background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+                opacity 0.55s ease;
+  }
+  
+  #menuToggle span:first-child{
+    transform-origin: 0% 0%;
+  }
+  
+  #menuToggle span:nth-last-child(2){
+    transform-origin: 0% 100%;
+  }
+  
+  #menuToggle input:checked ~ span{
+    opacity: 1;
+    transform: rotate(45deg) translate(-2px, -1px);
+    background: #fff;
+  }
+  
+  #menuToggle input:checked ~ span:nth-last-child(3){
+    opacity: 0;
+    transform: rotate(0deg) scale(0.2, 0.2);
+  }
+  
+  #menuToggle input:checked ~ span:nth-last-child(2){
+    transform: rotate(-45deg) translate(0, -1px);
+  }
+  #menuToggle input:checked ~ ul{
+    transform: none;
+  }
+  #menu_2{
+    position: fixed;
+    width: 500px;
+    min-height: 1000px;
+    height: 100%;
+    margin: -130px 0 0 -50px;
+    padding: 50px;
+    padding-top: 180px;
+    padding-left: 80px;
+    background: #001763;
+    list-style-type: none;
+    -webkit-font-smoothing: antialiased;
+    transform-origin: 0% 0%;
+    transform: translate(-110%, 0);
+    color: #fff;
+  
+    transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+  }
+  
+  #menu_2 li{
+    padding: 10px 0;
+    font-size: 18px;
+  }
+
+
+  
+  .line div, .line a{
+      font-family: 'Parrafos';
+    /* font-size: 0px !important; */
+  }
+  
+  .line{
+    position: absolute;
+    bottom: 50px;
+  }
+  
+  #menuToggle input:checked ~ ul{
+    transform: none;
+  }
+  
+
+
 /******************** Header & Banner ********************/
 header{    
     position: relative;
@@ -62,12 +200,15 @@ header .header h1{
     font-weight: 800;
 }
 .link-button p {
+    font-family: 'Parrafos', sans-serif !important;
     font-size: 1.5rem;
     margin-right: 1.5rem;
 }
 .link-button {
     display: flex;
     align-items: center;
+    /* font-family: 'Parrafos', sans-serif;
+     */
 }
 .link-button img,
 .link-button a{
@@ -88,7 +229,7 @@ h2 {
 
 /******************** Main Section ********************/
 .main {
-    font-family: "Helvetica Neue";
+    font-family: 'Parrafos', sans-serif !important;
     background: linear-gradient(90deg, #FDAA29 50%, #FCF9F5 50%);
     width: 100%;
     height: 100vh;
@@ -102,6 +243,9 @@ h2 {
 .first-icons, .second-icons {
     display: flex;
     width: 50%;
+}
+.second-icons p {
+    font-family: 'Parrafos', sans-serif !important;
 }
 .icon-box{
     margin: 0 1rem;
@@ -120,7 +264,7 @@ h2 {
 } 
 .menu-box {
     width: 45%;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Parrafos', sans-serif !important;
     margin-left: 8rem;
     display: flex;
     flex-direction: column;
@@ -141,7 +285,7 @@ h2 {
     background-position: center;
 }
 .menu-box .title{
-    font-family: 'Subtitulos', 'Monserrat', sans-serif;
+    font-family: 'Subtitulos', sans-serif;
     font-size: 2.5rem;
     font-weight: 300;
     border-left: 4px solid #021A61;
@@ -215,7 +359,7 @@ h2 {
 }
 /******************** Quotes ********************/
 .quote {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Parrafos', sans-serif;
     height: 100vh;
     margin-top: 5rem;
     margin-left: 8rem;
@@ -241,7 +385,7 @@ h2 {
 /******************** Izana Carousel ********************/
 .izana-carousel {
     height: 100vh;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Parrafos', sans-serif !important;
 }
 .izana-carousel h2 {
     border: none;
@@ -305,7 +449,7 @@ h2 {
 
 /******************** Amenities Carousel ********************/
 .amenities {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Parrafos', sans-serif !important;
     background: linear-gradient(90deg, #FCF9F5 50%, #021A61 50%);
     margin: 7rem 0;
     height: 100vh;
@@ -474,7 +618,7 @@ h2 {
 
  .adhara-section,
  .quadra-section {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Parrafos', sans-serif !important;
     height: auto;
     margin: 5rem 4rem;
     position: relative;
@@ -619,12 +763,13 @@ h2 {
     display: flex;
     justify-content: center;
 }
+
 #footer{
     text-align:center;
     color:#fff;
     padding-top: 5%;
     font-size:1.3em;
-    background-image: url("./../assets/images/Footer.png");
+    background-image: url("./../assets/images/Footer.jpg");
     background-color: #fcf9f5;
     background-size:cover;
     background-position: center;
