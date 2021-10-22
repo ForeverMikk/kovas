@@ -28,8 +28,8 @@ html, body {
 /********* Header **********/
 header{    
     /* position: relative; */
-    opacity: 1;
-    background-image: url("./../assets/izana/galery/Galeria_Principal.jpg");
+    /* opacity: 1; */
+    background-image: url("./../assets/izana/galery/FondoGaleria.png");
     width: 100%;
     height: 100vh;
     background-repeat: no-repeat;
@@ -52,7 +52,7 @@ header .title h1{
     margin-top: 30vh;
     color: #fff;
     margin-bottom: 3rem;
-    font-size: 4rem;
+    font-size: 3.5rem;
     font-weight: 800;
 }
 header .title a {
@@ -66,6 +66,7 @@ header .title a img {
 
 /* Return Button*/
 .return {
+    /* margin: 3rem; */
     text-decoration: none;
     display: flex;
     align-items: center;
@@ -84,7 +85,7 @@ header .title a img {
     width: 100%;
 }
 h2 {
-    margin: 4rem 0;
+    margin: 6rem 0;
     font-family: 'Subtitulos', 'Monserrat', sans-serif;
     margin-left: 8rem;
     font-weight: 500;
