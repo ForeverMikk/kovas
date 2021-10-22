@@ -631,6 +631,7 @@ h2 {
     text-align: center;
     background-position:center;
   }
+  
   #footer .formulario{
     text-align: left;
     color: #001763;
@@ -718,7 +719,7 @@ h2 {
     color: #fcf9f5;
     text-decoration: none;
     text-align: right;
-    padding-right: 15%;
+    padding-right: 34%;
   }
   
   #footer .bottom .copy{
@@ -737,6 +738,42 @@ h2 {
     padding: 3%;
     color: rgba(0, 0, 0, 0.5);
   }
+
+  .redes{
+    display: inline-flex;
+  }
+  .redes div{
+      margin: 30px 50px 0 0;
+      height: 30px;
+      width: 30px;
+      text-align: center;
+      background-size:cover;
+      background-position: center;
+      color: #001763;
+      background-repeat: no-repeat;
+  }
+  
+  .redes .fb{
+      background-image: 
+        url('../assets/icons/fb.png');
+  }
+  .redes .ig{
+      background-image: 
+        url('../assets/icons/ig.png');
+  }
+  .redes .in{
+      background-image: 
+        url('../assets/icons/in.png');
+  }
+  .redes .tw{
+      background-image: 
+        url('../assets/icons/tw.png');
+  }
+  .redes .wh{
+    background-image: 
+      url('../assets/icons/wh.png');
+  }
+  
   .menuflecha{
     width: auto; 
       height: auto;
