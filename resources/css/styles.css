@@ -1194,6 +1194,11 @@ h2 {
     .amenities .amenities-info p {
         font-size: 1.2rem;
     }
+    
+    #logo2 {
+        margin-top: 8rem;
+        /* margin-left: 2rem; */
+    }
 }
 @media screen and (max-width: 520px){
     
@@ -1291,6 +1296,7 @@ h2 {
         padding-bottom: 3rem;
     }
     .amen {
+        padding-top: 2rem;
         flex-direction: column;
     }
     .amenities .amenities-info {
@@ -1300,7 +1306,7 @@ h2 {
         max-width: 100%;
     }
     .amenities-buttons button {
-        margin: 1.5rem 4rem;
+        margin: 1.5rem 2rem;
     }
     .amen-car {
         margin: 3rem 2rem;
